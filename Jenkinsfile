@@ -19,5 +19,11 @@ pipeline {
                 sh 'ls -la'
             }
         }
+stage('Build') {
+    steps {
+        echo 'Building the application...'
+        sh 'echo Build completed successfully!'
+    }
+}
     }
 }

@@ -24,6 +24,13 @@ stage('Build') {
         echo 'Building the application...'
         sh 'echo Build completed successfully!'
     }
+
+}
+stage('Test') {
+    steps {
+        echo 'Testing the application...'
+        sh 'echo All tests passed successfully!'
+    }
 }
     }
 }

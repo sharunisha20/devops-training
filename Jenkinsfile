@@ -22,9 +22,8 @@ pipeline {
 stage('Build') {
     steps {
         echo 'Building the application...'
-        sh 'echo Build completed successfully!'
+        sh 'docker build -t devops-training-app:v2 .'
     }
-
 }
 stage('Test') {
     steps {

@@ -28,7 +28,7 @@ stage('Build') {
 stage('Test') {
     steps {
         echo 'Testing the application...'
-        sh 'echo All tests passed successfully!'
+        sh 'bash test.sh'
     }
 }
     }

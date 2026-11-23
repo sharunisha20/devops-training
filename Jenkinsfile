@@ -31,5 +31,12 @@ stage('Test') {
         sh 'bash test.sh'
     }
 }
+stage('Deploy') {
+    steps {
+        echo 'Deploying the application...'
+        sh 'docker rm -f devops-training-app-v2 || true'
+        sh 'docker run -d -p 8083:80 --name devops-training-app-v2 devops-training-app:v2'
+    }
+}
     }
 }
